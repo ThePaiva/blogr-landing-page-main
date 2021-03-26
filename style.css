@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&family=Ubuntu:wght@300;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+
+}
+
+header{
+    height: 90vh;
+    position: relative;
+    border-bottom-left-radius: 100px;
+    background: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+}
+
+.header-content{
+    width: 90%;
+    margin: auto;
+    padding-top: 25%;
+    text-align: center;
+    clear: both;
+}
+.header-content h1{
+    margin-bottom: 5%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.3em;
+    font-weight: 500;
+    color: white;
+}
+
+.header-content p{
+    font-family: 'Overpass', sans-serif;
+    color: white;
+}
+
+.header-btn{
+    display: inline-block;
+    margin: 50px 10px;
+    padding: 15px 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+}
+.header-btn:hover{
+    color: hsl(353, 100%, 62%);
+    background-color: white;
+}
+
+.header-btn:first-of-type{
+    color: hsl(353, 100%, 62%);
+    background-color: white;
+}
+
+.header-btn:first-of-type:hover{
+    color: white;
+    background-color: transparent;
+}
+
+.menu{
+    display: none;
+    width: 90%;
+    margin: 4em 5%;
+    position: absolute;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.7em;
+
+}
+
+.menu ul li{
+    padding: 1em;
+    list-style: none;
+}
+
+.menu ul li ul{
+    border-radius: 10px;
+    background-color: rgb(231, 230, 230);
+}
+
+.menu ul li ul li a{
+    font-size: .8em;
+    color: rgb(122, 122, 122);
+    text-decoration: none;
+}
+
+.arrow{
+    width: 15px;
+    margin: 0 7px;
+    transform: rotate(180deg);
+}
+
+.login{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    padding: .7em 1.4em;
+    border-radius: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.sign{
+    color: white;
+    background: linear-gradient(to right,hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+}
+
+
+.menu-logo{
+    margin: 3em 1em;
+    float: left;
+}
+
+.menu-hamburguer{
+    width: 40px;
+    margin: 3.5em 1em;
+    float: right;
+}
+/* MAIN */
+
+.main-container{
+    width: 100%;
+    margin: 20% 0;
+    display: grid;
+    gap: 5%;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+.main-container h2, h3{
+    margin: 10% 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 1.6em;
+    color: hsl(208, 49%, 24%);
+}
+
+.main-container p{
+    font-family: 'Overpass', sans-serif;
+    color: hsl(207, 13%, 34%);
+}
+
+article{
+    width: 1fr;
+    display: grid;
+    padding: 20% 0;
+    justify-items: center;
+}
+
+.illustration-mobile{
+    width: 300px;
+}
+
+.section-texts{
+    width: 300px;
+}
+
+.phones{
+    height: 300px;
+    width: 400px;
+    margin-top: -200px;
+}
+
+.phone{
+    width: 300px;
+}
+
+.article-middle{
+    padding: 30% 0;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    background: linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+}
+
+.article-middle h2{
+    font-size: 2.3em;
+    color: white;
+}
+
+.article-middle p{
+    color: white;
+}
+
+.img{
+    width: 300px;
+}
+
+.illustration-laptop-mobile{
+    width: 300px;
+}
+
+
+
+
+
+
+
+
+footer{
+    margin-top: 300px;
+    padding: 10% 0;
+    border-top-right-radius: 100px;
+    background-color: hsl(240, 10%, 16%);
+}
