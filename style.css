@@ -7,6 +7,8 @@
 
 }
 
+/* HEADER START */
+
 header{
     height: 90vh;
     position: relative;
@@ -61,6 +63,10 @@ header{
     background-color: transparent;
 }
 
+/* HEADER END */
+
+/* MENU START */
+
 .menu{
     display: none;
     width: 90%;
@@ -80,20 +86,20 @@ header{
 }
 
 .menu ul li ul{
+    display: none;
     border-radius: 10px;
     background-color: rgb(231, 230, 230);
 }
 
 .menu ul li ul li a{
     font-size: .8em;
-    color: rgb(122, 122, 122);
+    color: rgb(106, 105, 131);
     text-decoration: none;
 }
 
 .arrow{
     width: 15px;
     margin: 0 7px;
-    transform: rotate(180deg);
 }
 
 .login{
@@ -110,7 +116,6 @@ header{
     background: linear-gradient(to right,hsl(13, 100%, 72%), hsl(353, 100%, 62%));
 }
 
-
 .menu-logo{
     margin: 3em 1em;
     float: left;
@@ -121,19 +126,38 @@ header{
     margin: 3.5em 1em;
     float: right;
 }
+
+.menu-hamburguer-icon{
+    width: 100%;
+}
+
+.menu-hamburguer-close{
+    display: none;
+    width: 30px;
+}
+
+hr{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+/* MENU END */
+
 /* MAIN */
 
 .main-container{
     width: 100%;
-    margin: 20% 0;
+    margin: 1em 0;
     display: grid;
-    gap: 5%;
+    gap: 3em;
     grid-template-columns: 100%;
     text-align: center;
 }
 
 .main-container h2, h3{
-    margin: 10% 0;
+    margin: 1em 0;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     font-size: 1.6em;
@@ -194,16 +218,34 @@ article{
     width: 300px;
 }
 
+/* MAIN END */
 
-
-
-
-
-
+/* FOOTER START */
 
 footer{
-    margin-top: 300px;
+    margin-top: 2em;
     padding: 10% 0;
     border-top-right-radius: 100px;
     background-color: hsl(240, 10%, 16%);
+    text-align: center;
+    font-family: 'Overpass';
+    color: white;
+}
+
+footer img{
+    margin: 1em 0;
+}
+
+.menu-footer ul{
+    margin: 1em;
+    list-style: none;
+    
+}
+
+.menu-footer ul li{
+    line-height: 1.6em;
+}
+.menu-footer ul li a{
+    text-decoration: none;
+    color: white;
 }

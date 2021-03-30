@@ -22,12 +22,14 @@
   <header>
     <nav>
       <img class="menu-logo"src="images/logo.svg" alt="Logo">
-      <img class="menu-hamburguer" src="images/icon-hamburger.svg" alt="menu">
+      <a class="menu-hamburguer" onclick="mobileMenu()" alt="menu"><img class="menu-hamburguer-icon" src="images/icon-hamburger.svg" alt="menu">
+        <img class="menu-hamburguer-close" src="images/icon-close.svg" alt="menu">
+      </a>
       <div class="menu">
         <ul>
           <li>
-            Product<img class="arrow" src="images/icon-arrow-dark.svg">
-            <ul>
+            <a class="menu-items" onclick="menuItems(0)">Product<img class="arrow" src="images/icon-arrow-dark.svg"></a>
+            <ul class="menu-list">
               <li><a href="#">Overview</a></li>
               <li><a href="#">Pricing</a></li>
               <li><a href="#">Marketplace</a></li>
@@ -36,8 +38,8 @@
             </ul>
           </li>
           <li>
-            Company<img class="arrow"  src="images/icon-arrow-dark.svg">
-            <ul>
+            <a class="menu-items" onclick="menuItems(1)">Company<img class="arrow"  src="images/icon-arrow-dark.svg"></a>
+            <ul class="menu-list">
               <li><a href="#">About</a></li>
               <li><a href="#">Team</a></li>
               <li><a href="#">Blog</a></li>
@@ -45,14 +47,15 @@
             </ul>
           </li>
           <li>
-            Connect<img class="arrow"  src="images/icon-arrow-dark.svg">
-            <ul>
+            <a class="menu-items" onclick="menuItems(2)">Connect<img class="arrow"  src="images/icon-arrow-dark.svg"></a>
+            <ul class="menu-list">
               <li><a href="#">Contact</a></li>
               <li><a href="#">Newsletter</a></li>
               <li><a href="#">LinkedIn</a></li>
             </ul>
           </li>
         </ul>
+        <hr>
         <ul>
           <li><a class="login" href="#">Login</a></li>
           <li><a class="login sign" href="#">Sign Up</a></li>
@@ -70,7 +73,7 @@
   </header>
   <main class="main-container">
     
-    <article class="main-article-1">
+    <article class="">
       <h2> Designed for the future</h2>
       <img class="illustration-mobile" src="images/illustration-editor-mobile.svg" alt="editor illustration">
       <section class="section-texts">
@@ -121,7 +124,7 @@
   </main>
   <footer>
     <img src="images/logo.svg" alt="Logo">
-    <nav>
+    <nav class="menu-footer">
       <h4>Product</h4>
       <ul>
         <li><a href="">Overview</a></li>
@@ -150,5 +153,46 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Lucas Paiva Dias</a>.
   </div>
+
+<script>
+
+function mobileMenu(){
+  const menu = document.querySelector('.menu');
+  const iconOpen = document.querySelector('.menu-hamburguer-icon');
+  const iconClose = document.querySelector('.menu-hamburguer-close');
+
+  if(menu.style.display === "none"){
+    menu.style.display = "block";
+    iconOpen.style.display = "none";
+    iconClose.style.display = "block";
+
+
+  }else{
+    menu.style.display = "none";
+    iconOpen.style.display = "block";
+    iconClose.style.display = "none";
+  }
+}
+
+function menuItems(i){
+  const menuItemsNodeList = document.querySelectorAll('.menu-list');
+  const menuList = Array.from(menuItemsNodeList);
+  const arrowList = document.querySelectorAll('.arrow');
+  const arrow = Array.from(arrowList);
+
+  if(menuList[i].style.display === "none"){
+    menuList[i].style.display = "block";
+    menuList[i].style.color = "rgb(106, 105, 131)";
+    arrow[i].style.transform = "rotate(180deg)";
+  }else{
+    menuList[i].style.display = "none";
+    arrow[i].style.transform = "rotate(0deg)";
+  }
+}
+
+
+</script>
+
+
 </body>
 </html>
