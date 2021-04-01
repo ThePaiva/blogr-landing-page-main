@@ -21,7 +21,7 @@
 
   <header>
     <nav>
-      <img class="menu-logo"src="images/logo.svg" alt="Logo">
+      <img class="menu-logo" src="images/logo.svg" alt="Logo">
       <a class="menu-hamburguer" onclick="mobileMenu()" alt="menu"><img class="menu-hamburguer-icon" src="images/icon-hamburger.svg" alt="menu">
         <img class="menu-hamburguer-close" src="images/icon-close.svg" alt="menu">
       </a>
@@ -73,9 +73,11 @@
   </header>
   <main class="main-container">
     
-    <article class="">
-      <h2> Designed for the future</h2>
+    <article>
+      <h2 class="tittle1"> Designed for the future</h2>
       <img class="illustration-mobile" src="images/illustration-editor-mobile.svg" alt="editor illustration">
+      <div class="illustration-desktop"><img class="" src="images/illustration-editor-desktop.svg" alt="editor illustration"></div>
+      
       <section class="section-texts">
         <h3>Introducing an extensible editor</h3>
         <p>
@@ -106,6 +108,7 @@
   <article>
     <div class="img">
     <img class="illustration-laptop-mobile" src="images/illustration-laptop-mobile.svg" alt="laptop illustration">
+    <img class="illustration-laptop-desktop" src="images/illustration-laptop-desktop.svg" alt="laptop illustration">
     </div> 
     <section class="section-texts">
         <h3>Free, open, simple</h3>
@@ -125,6 +128,7 @@
   <footer>
     <img src="images/logo.svg" alt="Logo">
     <nav class="menu-footer">
+      <div>
       <h4>Product</h4>
       <ul>
         <li><a href="">Overview</a></li>
@@ -133,6 +137,8 @@
         <li><a href="">Features</a></li>
         <li><a href="">Integrations</a></li>
       </ul>
+    </div>
+    <div>
       <h4>Company</h4>
       <ul>
         <li><a href="">About</a></li>
@@ -140,12 +146,15 @@
         <li><a href="">Blog</a></li>
         <li><a href="">Careers</a></li>
       </ul>
+    </div>
+    <div>
       <h4>Connect</h4>
       <ul>
         <li><a href="">Contact</a></li>
         <li><a href="">Newsletter</a></li>
         <li><a href="">LinkedIn</a></li>
       </ul>
+    </div>
     </nav>
   </footer>
 
@@ -176,8 +185,9 @@ function mobileMenu(){
 
 function menuItems(i){
   const menuItemsNodeList = document.querySelectorAll('.menu-list');
-  const menuList = Array.from(menuItemsNodeList);
   const arrowList = document.querySelectorAll('.arrow');
+  
+  const menuList = Array.from(menuItemsNodeList);
   const arrow = Array.from(arrowList);
 
   if(menuList[i].style.display === "none"){
