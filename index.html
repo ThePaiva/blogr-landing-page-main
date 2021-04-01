@@ -28,7 +28,11 @@
       <div class="menu">
         <ul>
           <li>
-            <a class="menu-items" onclick="menuItems(0)">Product<img class="arrow" src="images/icon-arrow-dark.svg"></a>
+            <a class="menu-items" onclick="menuItems(0)">
+              Product
+              <img class="arrow" src="images/icon-arrow-dark.svg">
+              <img class="arrow-light"  src="images/icon-arrow-light.svg"></a>
+            </a>
             <ul class="menu-list">
               <li><a href="#">Overview</a></li>
               <li><a href="#">Pricing</a></li>
@@ -37,8 +41,12 @@
               <li><a href="#">Integrations</a></li>
             </ul>
           </li>
+
           <li>
-            <a class="menu-items" onclick="menuItems(1)">Company<img class="arrow"  src="images/icon-arrow-dark.svg"></a>
+            <a class="menu-items" onclick="menuItems(1)">
+              Company
+              <img class="arrow"  src="images/icon-arrow-dark.svg"></a>
+              <img class="arrow-light"  src="images/icon-arrow-light.svg"></a>
             <ul class="menu-list">
               <li><a href="#">About</a></li>
               <li><a href="#">Team</a></li>
@@ -46,8 +54,12 @@
               <li><a href="#">Careers</a></li>
             </ul>
           </li>
+
           <li>
-            <a class="menu-items" onclick="menuItems(2)">Connect<img class="arrow"  src="images/icon-arrow-dark.svg"></a>
+            <a class="menu-items" onclick="menuItems(2)">
+              Connect
+              <img class="arrow"  src="images/icon-arrow-dark.svg"></a>
+              <img class="arrow-light"  src="images/icon-arrow-light.svg"></a>
             <ul class="menu-list">
               <li><a href="#">Contact</a></li>
               <li><a href="#">Newsletter</a></li>
@@ -186,17 +198,23 @@ function mobileMenu(){
 function menuItems(i){
   const menuItemsNodeList = document.querySelectorAll('.menu-list');
   const arrowList = document.querySelectorAll('.arrow');
+  const arrowListLight = document.querySelectorAll('.arrow-light')
   
   const menuList = Array.from(menuItemsNodeList);
   const arrow = Array.from(arrowList);
+  const arrowLight = Array.from(arrowListLight);
+
 
   if(menuList[i].style.display === "none"){
     menuList[i].style.display = "block";
     menuList[i].style.color = "rgb(106, 105, 131)";
     arrow[i].style.transform = "rotate(180deg)";
+    arrowLight[i].style.transform = "rotate(180deg)";
+    
   }else{
     menuList[i].style.display = "none";
     arrow[i].style.transform = "rotate(0deg)";
+    arrowLight[i].style.transform = "rotate(0deg)";
   }
 }
 
